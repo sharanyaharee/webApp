@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/header.ejs')%>
+  <body>
+    <div class="row d-flex align-items-center m-5"  style="margin-bottom:190px">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <form
+          id="form"
+          action="/admin-login"
+          method="POST"
+          class="border rounded bg-light my-3 mx-1 py-3 px-3"
+        >
+          <h5 class="loggedout"></h5>
+          <h5 class="loggedout"></h5>
+
+          <h4 class="text-center">Admin LogIn</h4>
+          <% if (message) { %>
+            <h5 class="logged"><%= message %></h5>
+       <% } %> 
+     
+  
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              class="form-control pb-2"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+              name="adminMail"
+            />
+
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              name="password"
+            />
+          </div>
+          <br />
+          <br />
+          <button
+            type="submit"
+            style="width: 100%"
+            class="btn-block btn btn-primary"
+          >
+            LogIn
+          </button>
+          <p>
+            Don't have an account? <a href="/register">Register</a>
+          </p>
+          <p>
+            Are you an User? <a href="/">User Login</a>
+          </p>
+        </form>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

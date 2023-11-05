@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs')%>
+<body>
+    <div class="row d-flex  align-items-center mt-5">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+         
+            <form  id="form" action="/register" method="POST" class="border rounded bg-light my-3 mx-1 py-3 px-3">
+                <h4 class="text-center">Register</h4>
+                <div class="form-group">
+                  <% if (message) { %>
+                    <p class="logged"><%= message %></p>
+                  <% } %>
+                 
+                  <label for="exampleInputEmail1">Name</label>
+                  <input type="name" class="form-control pb-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" name="name">
+                  <br>
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control pb-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+                </div>
+                <br>               
+                <br>
+                <button type="submit" style="width:100%" class=" btn-block btn btn-primary">Register Now</button>
+                <p>Already own an Account? <a href="/"><h6>Login</h6></a></p>
+              </form>
+            
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+    
+</body>
+</html>
